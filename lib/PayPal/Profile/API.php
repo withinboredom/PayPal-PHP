@@ -253,7 +253,7 @@ class APIProfile extends Profile
     function getInstance($id, &$handler)
     {
         $classname = __CLASS__;
-        $inst = &new $classname($id, $handler);
+        $inst = new $classname($id, $handler);
 
         $result = $inst->_load();
         if (PayPal::isError($result)) {
